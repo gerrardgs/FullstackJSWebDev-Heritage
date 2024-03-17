@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background</title>
+    <style>
+        /* Background Warna */
+        body {
+            background-color: lightblue;
+        }
+
+        /* Background Gambar */
+        div {
+            width: 960px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 0 auto;
+            background: url('assets/assets/strawberries.jpg') bottom right / 700px 400px no-repeat scroll padding-box;
+        }
+
+        /* Background Campuran */
+        .mixed-background {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to right, lightgreen, lightyellow); /* campuran warna */
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Warna -->
+    <div>
+        <!-- Background Gambar -->
+    </div>
+
+    <!-- Background Campuran -->
+    <div class="mixed-background"></div>
+</body>
+</html>
