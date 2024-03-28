@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', sans-serif;
+}
+
+html {
+    font-size: 15px;
+    background-color: #000000;
+    opacity: 10px;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calculator-container {
+    background-color: blueviolet;
+    width: 600px;
+    height: auto;
+    border-radius: 0 0 30px 30px;
+}
+
+.output {
+    width: 100%;
+}
+
+.operation {
+    width: 600px;
+    height: 70px;
+    color: aqua;
+    font-size: 2.0em;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.operation .value {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.result {
+    width: 600px;
+    height: 140px;
+    color: aliceblue;
+    font-size: 2.5em;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+}
+
+.result .value {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.input {
+    background-color: antiquewhite;
+    border-radius: 0 0 25px 25px;
+    border: 1px solid #1d1d1d;
+    height: 340px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.row button:hover {
+    font-weight: bold;
+}
+
+.row #calculate {
+    color: #FFFFFF;
+    background-color: blue;
+    width: 120px;
+    border-radius: 50px;
+}
+
+.row #delete {
+    color: #FFFFFF;
+    background-color: #e05046;
+}
+
+#division,
+#substraction,
+#multiplication,
+#addition {
+    color: #e05046;
+}
+
+.input button span{
+    font-size: 0.5em;
+    position: absolute;
+}
+
+.active-angle {
+    background-color: #1d1d1d !important;
+    color: #FFFFFF;
+    border-radius: 10px !important;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <title>Program Gabungan JavaScript</title>
+</head>
+<body>
+    <h1>Program 1: Pesan Puasa</h1>
+    <script>
+        alert("SELAMAT MENUNAIKAN IBADAH PUASA!");
+    </script>
+    
+    <h1>Program 2: Teks yang Berubah dengan Tombol</h1>
+    <p id="myText">Teks awal</p>
+    <button id="ubahText">Ubah Teks!</button>
+    <script>
+    const myText = document.getElementById("myText");
+    const ubahTextButton = document.getElementById("ubahText");
+    
+    ubahTextButton.addEventListener("click", () => {
+        const teksBaru = generateRandomText();
+        myText.textContent = teksBaru;
+    });
+
+    function generateRandomText() {
+        const kataKata = ["Halo", "Selamat datang", "Bagaimana kabarmu?", "Senang bertemu denganmu"];
+        return kataKata[Math.floor(Math.random() * kataKata.length)];
+    }
+</script>
+
+<h1>Program 3: Kelompok dengan Penambahan Anggota</h1>
+<ul id="anggota-list"></ul>
+<script>
+    const anggotaAwal = ["Andi", "Budi", "Cici", "Doni"];
+    console.log("Anggota awal:", anggotaAwal);
+    anggotaAwal.splice(2, 0, "Eko", "Fitri");
+    console.log("Anggota setelah penambahan:", anggotaAwal);
+    const anggotaList = document.getElementById("anggota-list");
+</script>
+</body>
+</html>
