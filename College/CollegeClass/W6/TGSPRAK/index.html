@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Form Registrasi</h1>
+    <form action="/submit" method="post" onsubmit="return validasi()">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda">
+        <br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Masukkan username Anda">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda">
+        <br>
+        <label for="password">Password:</label>
+        <div style="position: relative;">
+            <input type="password" id="password" name="password" placeholder="Masukkan password">
+            <!-- Anda bisa tambahkan ikon mata di sini juga jika diinginkan -->
+        </div>
+        <br>
+        <label for="konfirmasi_password">Konfirmasi Password:</label>
+        <div style="position: relative;">
+            <input type="password" id="konfirmasi_password" name="konfirmasi_password" placeholder="Masukkan kembali password Anda">
+            <!-- Anda bisa tambahkan ikon mata di sini juga jika diinginkan -->
+        </div>
+        <br>
+        <label for="no_telepon">Nomor Telepon:</label>
+        <input type="number" id="no_telepon" name="no_telepon" placeholder="Masukkan nomor telepon Anda">
+        <br>
+        <label for="jenis_kelamin">Jenis Kelamin:</label>
+        <select id="jenis_kelamin" name="jenis_kelamin">
+            <option value="laki-laki">Laki-laki</option>
+            <option value="perempuan">Perempuan</option>
+        </select>
+        <br>
+        <label for="alamat_website">Alamat Website:</label>
+        <input type="url" id="alamat_website" name="alamat_website" placeholder="Masukkan alamat website Anda">
+        <br>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <script>
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var konfirmasi_password = document.getElementById("konfirmasi_password").value;
+            var alamat_website = document.getElementById("alamat_website").value;
+
+            // Validasi nama
+            if (nama === "") {
+                alert("Nama Lengkap tidak boleh kosong!");
+                return false;
+            }
+
+            // Validasi username
+            if (username === "") {
+                alert("Username tidak boleh kosong!");
+                return false;
+            } else if (username.length < 6) {
+                alert("Username minimal 6 karakter!");
+                return false;
+            }
+
+            // Validasi email
+            if (email === "") {
+                alert("Email tidak boleh kosong!");
+                return false;
+            } else if (!/\S+@\S+\.\S+/.test(email)) {
+                alert("Alamat email tidak valid!");
+                return false;
+            }
+
+            // Validasi password
+            if (password === "") {
+                alert("Password tidak boleh kosong!");
+                return false;
+            } else if (password.length < 6) {
+                alert("Password minimal 6 karakter!");
+                return false;
+            }
+
+            // Validasi konfirmasi password
+            if (konfirmasi_password === "") {
+                alert("Konfirmasi password tidak boleh kosong!");
+                return false;
+            } else if (konfirmasi_password !== password) {
+                alert("Konfirmasi password tidak sama dengan password!");
+                return false;
+            }
+
+            // Validasi alamat website
+            if (alamat_website === "") {
+                alert("Alamat website tidak boleh kosong!");
+                return false;
+            } else if (!/^(https?:\/\/)?[\w\-]+(\.[\w\-]+)+[/#?]?.*?$/.test(alamat_website)) {
+                alert("Alamat website tidak valid!");
+                return false;
+            }
+
+            return true; // Form akan disubmit jika semua validasi berhasil
+        }
+    </script>
+</body>
+</html>
