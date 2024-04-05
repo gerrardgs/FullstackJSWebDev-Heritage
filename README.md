@@ -1,2 +1,2 @@
 # FullstackWebDev-Heritage
-Learn 'Bout HTML/CSS/JS/PHP/SQL/MariaDB Language ~ Fullstack Web Development Projects
+Learn 'Bout Web Tools And Language ~ Fullstack Web Development Projects
