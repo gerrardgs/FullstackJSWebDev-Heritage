@@ -1,4 +1,4 @@
 # TUGAS WEEK 11 - LARAVEL
-LINK ZIP TUGAS LARAVEL:
+## LINK ZIP TUGAS LARAVEL:
 1. https://bit.ly/TgsPemWebLaravelGerrard 
-2. 
+2. https://bit.ly/ZIPlinksDrive
